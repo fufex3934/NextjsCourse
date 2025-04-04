@@ -1,7 +1,11 @@
-
-import styles from './styles.module.css'
-export default function BlogPage() {
-  return (
-    <div className={styles.blog}>BlogPage</div>
-  )
-}
+export default async function Page() {
+    const data = await fetch('https://api.vercel.app/blog')
+    const posts = await data.json()
+    return (
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
+    )
+  }
