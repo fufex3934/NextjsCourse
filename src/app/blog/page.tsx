@@ -1,7 +1,7 @@
 
-
+import styles from './styles.module.css'
 export default function BlogPage() {
   return (
-    <div>BlogPage</div>
+    <div className={styles.blog}>BlogPage</div>
   )
 }
