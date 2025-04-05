@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import profilePic from '../../public/image1.jpg'
 export default function Home() {
   return (
@@ -9,6 +9,8 @@ export default function Home() {
     src={profilePic}
     alt="Picture of the author"
     />
+    <Link href="/blog">Blog</Link>
+    <Link href="/products">Products</Link>
     </div>
   );
 }
